@@ -1,4 +1,4 @@
-<!-- title: Proin Quam -->
+<!-- title: From Teacher to Software Engineer -->
 <!-- subtitle: Lorem Ipsum -->
 <!-- author: Dave -->
 
