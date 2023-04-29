@@ -4,32 +4,44 @@ body {
     line-height: 1.5em;
     color: #333333;
     font-family: helvetica, arial, sans-serif;
+    background: seashell;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 0;
     line-height: 1.2em;
     margin-top: 1em;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
     color: #0000e0;
     text-decoration: none
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
     color: #0000ff;
     text-decoration: underline
 }
 
 
 /* Single column layout */
-nav section, header section, main, footer section {
+nav section,
+header section,
+main,
+footer section {
     max-width: 40em;
     margin-left: auto;
     margin-right: auto;
@@ -48,11 +60,16 @@ nav a {
     margin-right: 1em;
 }
 
-nav a:link, nav a:visited {
+nav a:link,
+nav a:visited,
+footer>section>p,
+#twitter-link,
+#github-link {
     color: #cccccc;
 }
 
-nav a:hover, nav a:active {
+nav a:hover,
+nav a:active {
     color: #ffffff;
     text-decoration: none;
 }
@@ -66,11 +83,11 @@ nav a:hover, nav a:active {
 
 /* Footer */
 footer {
-    background: #f0f0f0;
+    background: #333333;
     border-top: thin solid #e0e0e0;
     margin-top: 2em;
     padding: 1em 0;
-    box-shadow: 0 100vh 0 100vh #f0f0f0;
+    box-shadow: 0 100vh 0 100vh #333333;
     text-align: center;
 }
 
@@ -93,15 +110,21 @@ article {
     margin-bottom: 1em;
 }
 
-article h2 a:link, article h2 a:visited,
-article h1 a:link, article h1 a:visited,
-.more:link, .more:visited {
+article h2 a:link,
+article h2 a:visited,
+article h1 a:link,
+article h1 a:visited,
+.more:link,
+.more:visited {
     color: #333333;
 }
 
-article h2 a:hover, article h2 a:active,
-article h1 a:hover, article h1 a:active,
-.more:hover, .more:active {
+article h2 a:hover,
+article h2 a:active,
+article h1 a:hover,
+article h1 a:active,
+.more:hover,
+.more:active {
     color: #777777;
 }
 
@@ -131,15 +154,20 @@ div .more {
     font-weight: bold;
 }
 
-.rss:link, .rss:visited, .rss:hover, .rss:active {
+.rss:link,
+.rss:visited,
+.rss:hover,
+.rss:active {
     color: #ffffff;
     text-decoration: none;
 }
 
-.rss:link, .rss:visited {
+.rss:link,
+.rss:visited {
     background: #ff6600;
 }
 
-.rss:hover, .rss:active {
+.rss:hover,
+.rss:active {
     background: #ff8822;
 }
