@@ -9,10 +9,33 @@ jobs:
           python-version: 3.8
 
       - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - name: Install Dependencies
         run: |
           pip install commonmark
-          make site
 
-      - name: Confirm site is made
+      - name: Set env variable date
+        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+
+      - name: Create Local Changes
+        run: |
+          make site
+          cd _site
+          git init
+          git add .
+          git config --local user.email "actions@github.com"
+          git config --local user.name "Github Actions Auto Deploy Script"
+          git commit -m "deploy: $NOW"
+
+      - name: Push Bundle
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          # force: true
+          # directory: .
+
+      - name: Check Location
         run: ls
