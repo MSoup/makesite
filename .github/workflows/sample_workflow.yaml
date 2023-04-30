@@ -26,10 +26,11 @@ jobs:
 
       - name: Announce Deploy
         run: |
+          git branch
           cd _site
           git add -f . 
           git config --local user.name "Soup@Github Actions"
           git config --local user.email davenlu1989@gmail.com
           git commit -m 'deploy from github actions'
-          git push
+          git remote -v 
           echo "Deployed at $NOW"
