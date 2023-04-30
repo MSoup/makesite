@@ -26,5 +26,5 @@ jobs:
 
       - name: Announce Deploy
         run: |
-          git branch
-          git remote -v
+          git config user.name
+          git config user.email
