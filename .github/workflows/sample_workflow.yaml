@@ -27,7 +27,7 @@ jobs:
       - name: Announce Deploy
         run: |
           cd _site
-          git add .
+          git add -f . 
           git config --local user.name "Soup@Github Actions"
           git config --local user.email davenlu1989@gmail.com
           git commit -m 'deploy from github actions'
