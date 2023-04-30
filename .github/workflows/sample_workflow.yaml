@@ -26,5 +26,9 @@ jobs:
 
       - name: Announce Deploy
         run: |
-          git config user.name
-          git config user.email
+          git config --local user.name "Soup@Github Actions"
+          git config --local user.email davenlu1989@gmail.com
+          git add .
+          git commit -m 'deploy from github actions'
+          git push
+          echo "Deployed at $NOW"
