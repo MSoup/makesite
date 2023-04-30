@@ -21,8 +21,15 @@ jobs:
 
       - name: Create Local Changes
         run: |
+          git checkout -b gh-pages
           make site
 
       - name: Announce Deploy
         run: |
+          cd _site
+          git add .
+          git config --local user.name "Soup@Github Actions"
+          git config --local user.email davenlu1989@gmail.com
+          git commit -m 'deploy from github actions'
+          git push
           echo "Deployed at $NOW"
