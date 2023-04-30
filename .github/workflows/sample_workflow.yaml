@@ -22,20 +22,7 @@ jobs:
       - name: Create Local Changes
         run: |
           make site
-          cd _site
-          git init
-          git add .
-          git config --local user.email "actions@github.com"
-          git config --local user.name "Github Actions Auto Deploy Script"
-          git commit -m "deploy: $NOW"
 
-      - name: Push Bundle
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          # force: true
-          # directory: .
-
-      - name: Check Location
-        run: ls
+      - name: Announce Deploy
+        run: |
+          echo "Deployed at $NOW"

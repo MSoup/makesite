@@ -1,0 +1,23 @@
+.pic-1 {
+    max-height: 400px;
+}
+
+.about-me {
+    margin: 5%;
+    padding: 15px;
+    background: #cccccc;
+    clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-shadow {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid #343434;
+    filter: drop-shadow(0 0 4px #bcd3fc);
+}
