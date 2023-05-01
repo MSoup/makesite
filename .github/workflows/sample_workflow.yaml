@@ -16,8 +16,8 @@ jobs:
         run: |
           pip install commonmark
 
-      - name: Set env variable date
-        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+      - name: Peek at git config file
+        run: cat $HOME/.gitconfig
 
       - name: Create Local Changes
         run: |
@@ -31,5 +31,5 @@ jobs:
           sed -i 's/_site//' .gitignore
           git add .
           git commit -m 'deploy from github actions'
-          git push
+          git push --set-upstream origin gh-pages
           echo "Deployed at $NOW"
