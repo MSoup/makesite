@@ -21,6 +21,7 @@ jobs:
           git checkout -b gh-pages
           make site
           sed -i 's/_site//' .gitignore
+          git add .
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -a -m "Add changes"
