@@ -19,6 +19,7 @@ jobs:
       - name: Create Local Changes
         run: |
           git checkout -b gh-pages
+          sed -i 's/'
           make site
           sed -i 's/_site//' .gitignore
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
