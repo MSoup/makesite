@@ -28,5 +28,6 @@ jobs:
           git add .
           git config --local user.name "Soup@Github Actions"
           git config --local user.email davenlu1989@gmail.com
+          git push origin --set-upstream gh-pages
 
         
