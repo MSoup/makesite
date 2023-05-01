@@ -28,6 +28,7 @@ jobs:
         run: |
           git config --local user.name "Soup@Github Actions"
           git config --local user.email davenlu1989@gmail.com
+          sed -i 's/_site//' .gitignore
           git add .
           git commit -m 'deploy from github actions'
           git push
