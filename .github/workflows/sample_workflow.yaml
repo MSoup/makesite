@@ -26,8 +26,8 @@ jobs:
           sed -i 's/_site//' .gitignore
           git remote -v
           git add .
-          git config --local user.name "Soup@Github Actions"
-          git config --local user.email davenlu1989@gmail.com
-          git push origin --set-upstream gh-pages
+          git config --local user.name "Daven L"
+          git config --local user.email "davenlu1989@gmail.com"
+          git push --set-upstream origin gh-pages
 
         
