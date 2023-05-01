@@ -8,7 +8,7 @@ jobs:
         with:
           python-version: 3.8
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -20,7 +20,7 @@ jobs:
         run: |
           git checkout -b gh-pages
           make site
-
+          sed -i 's/_site//' .gitignore
 
       - name: Push changes
         uses: ad-m/github-push-action@master
