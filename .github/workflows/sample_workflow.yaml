@@ -21,13 +21,9 @@ jobs:
           git checkout -b gh-pages
           make site
 
-      - name: Announce Deploy
-        run: |
-          sed -i 's/_site//' .gitignore
-          git remote -v
-          git add .
-          git config --local user.name "Daven L"
-          git config --local user.email "davenlu1989@gmail.com"
-          git push --set-upstream origin gh-pages
 
-        
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
