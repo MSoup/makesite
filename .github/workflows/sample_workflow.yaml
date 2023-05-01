@@ -16,9 +16,6 @@ jobs:
         run: |
           pip install commonmark
 
-      - name: Peek at git config file
-        run: cat $HOME/.gitconfig
-
       - name: Create Local Changes
         run: |
           git checkout -b gh-pages
@@ -26,10 +23,8 @@ jobs:
 
       - name: Announce Deploy
         run: |
-          git config --local user.name "Soup@Github Actions"
-          git config --local user.email davenlu1989@gmail.com
           sed -i 's/_site//' .gitignore
           git add .
           git commit -m 'deploy from github actions'
-          git push --set-upstream origin gh-pages
-          echo "Deployed at $NOW"
+          git push --set-upstream gh-pages
+        
