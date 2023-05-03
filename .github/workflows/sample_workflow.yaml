@@ -1,4 +1,7 @@
-on: push
+on: 
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,14 +23,9 @@ jobs:
         run: |
           git checkout -b gh-pages
           make site
-          sed -i 's/_site//' .gitignore
-          git add .
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          folder: _site
           branch: gh-pages
