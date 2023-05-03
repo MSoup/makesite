@@ -1,0 +1,6 @@
+          cd _site
+          git add -f . 
+          git config --local user.name "Soup@Github Actions"
+          git config --local user.email davenlu1989@gmail.com
+          git commit -m 'deploy from github actions'
+          echo "Deployed at $NOW"
