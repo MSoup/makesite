@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-on: 
-=======
 on:
->>>>>>> 3e13d30 (trying JamesIves)
   push:
     branches:
       - main
