@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 on: 
+=======
+on:
+>>>>>>> 3e13d30 (trying JamesIves)
   push:
     branches:
       - main
@@ -18,12 +22,10 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install commonmark
-
       - name: Create Local Changes
         run: |
           git checkout -b gh-pages
           make site
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
