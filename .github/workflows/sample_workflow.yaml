@@ -26,3 +26,7 @@ jobs:
         with:
           folder: _site
           branch: gh-pages
+      - name: Check output html
+        run: |
+          cd _site
+          cat index.html
