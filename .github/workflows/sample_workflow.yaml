@@ -28,6 +28,7 @@ jobs:
           branch: gh-pages
       - name: Check output html
         run: |
+          git checkout gh-pages
           cd _site
           cat index.html
           git branch -v
