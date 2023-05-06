@@ -4,7 +4,7 @@
 ## How This Blog Began
 My goal was to see if I could accomplish one mission: generate a static site and auto deploy it on git commit. To seasoned web developers, this probably seems very trivial, but I wanted to see how far I could push the limits of my comfort. After all, I'm coming into this project with no knowledge of deploying sites.
 
-![alt text](/images/cat.jpeg)
+![alt text]({{base_path}}/images/cat.jpeg)
 
 ## The Constraints
 
