@@ -183,6 +183,7 @@ def main():
 
     # If params.json exists, load it.
     if os.path.isfile("params.json"):
+        print("json found, loading...")
         params.update(json.loads(fread("params.json")))
 
     # Load layouts.
