@@ -30,3 +30,4 @@ jobs:
         run: |
           cd _site
           cat index.html
+          git branch -v
