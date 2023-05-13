@@ -3,31 +3,31 @@
 
 <channel>
 <title>Blog</title>
-<link>http://localhost:8000/</link>
+<link>msoup.github.io/</link>
 <description>Grow with Technology</description>
 
 <item>
 <title>How I'm Hosting This Blog</title>
-<link>http://localhost:8000/blog/introduction/</link>
+<link>msoup.github.io/blog/introduction/</link>
 <description>
 <![CDATA[
 <p>
-How This Blog Began My goal was to see if I could accomplish one mission: generate a static site and auto deploy it on git&nbsp;<a href="http://localhost:8000/blog/introduction/">...</a>
+How This Blog Began My goal was to see if I could accomplish one mission: generate a static site and auto deploy it on git&nbsp;<a href="msoup.github.io/blog/introduction/">...</a>
 </p>
-<p><a href="http://localhost:8000/blog/introduction/">Read More</a></p>
+<p><a href="msoup.github.io/blog/introduction/">Read More</a></p>
 ]]>
 </description>
 <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
 </item>
 <item>
 <title>Proin Quam</title>
-<link>http://localhost:8000/blog/proin-quam/</link>
+<link>msoup.github.io/blog/proin-quam/</link>
 <description>
 <![CDATA[
 <p>
-def function(): return None Blog Template&nbsp;<a href="http://localhost:8000/blog/proin-quam/">...</a>
+def function(): return None Blog Template&nbsp;<a href="msoup.github.io/blog/proin-quam/">...</a>
 </p>
-<p><a href="http://localhost:8000/blog/proin-quam/">Read More</a></p>
+<p><a href="msoup.github.io/blog/proin-quam/">Read More</a></p>
 ]]>
 </description>
 <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
