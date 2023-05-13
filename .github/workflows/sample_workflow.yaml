@@ -23,7 +23,7 @@ jobs:
       - name: Create Local Changes
         run: |
           set APP_ENV=production
-          echo '{"base_path": $BASE_PATH}' > params.json
+          echo "{\"base_path\": \"$BASE_PATH\"}" > params.json
           make site
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
