@@ -22,7 +22,6 @@ jobs:
           make venv
       - name: Create Local Changes
         run: |
-          set APP_ENV=production
           echo "{\"base_path\": \"$BASE_PATH\"}" > params.json
           make site
       - name: Deploy

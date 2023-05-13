@@ -115,7 +115,7 @@ def read_content(filename):
                 params.update(json.loads(fread("params.json")))
 
             # Replace /static/ with /base_path/ in all areas in production only
-            if os.environ.get("APP_ENV") == "production":
+            if params["base_path"]:
                 text = re.sub(r"/static/", params["base_path"], text)
             # local env, remove /static/ and serve images from / locally
             # note: use with http.serve for correct path
