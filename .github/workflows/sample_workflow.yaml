@@ -33,5 +33,5 @@ jobs:
         run: |
           git checkout gh-pages
           cd _site
-          cat index.html
+          cat blog/proin-quam/index.html
           git branch -v

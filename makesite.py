@@ -114,6 +114,9 @@ def read_content(filename):
             if os.path.isfile("params.json"):
                 params.update(json.loads(fread("params.json")))
 
+            print("BASE_PATH IS...")
+            print(params.get("base_path"))
+
             # Replace /static/ with /base_path/ in all areas in production only
             if params["base_path"]:
                 text = re.sub(r"/static/", params["base_path"], text)
