@@ -2,6 +2,8 @@ on:
   push:
     branches:
       - master
+env:
+  BASE_PATH: /makesite
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,6 +23,7 @@ jobs:
       - name: Create Local Changes
         run: |
           set APP_ENV=production
+          echo "{'base_path': '$BASE_PATH'}" > params.json
           make site
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
