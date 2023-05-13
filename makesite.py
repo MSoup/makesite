@@ -114,16 +114,13 @@ def read_content(filename):
             if os.path.isfile("params.json"):
                 params.update(json.loads(fread("params.json")))
 
-            print("BASE_PATH IS...")
-            print(params.get("base_path"))
-
             # Replace /static/ with /base_path/ in all areas in production only
             if params["base_path"]:
-                text = re.sub(r"/static/", params["base_path"], text)
+                text = re.sub(r"/static", params["base_path"], text)
             # local env, remove /static/ and serve images from / locally
             # note: use with http.serve for correct path
             else:
-                text = re.sub(r"/static/", "/", text)
+                text = re.sub(r"/static", "", text)
 
             # Convert to HTML
             text = commonmark.commonmark(text)
