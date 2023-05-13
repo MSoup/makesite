@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
       - name: Install Dependencies
         run: |
-          pip install commonmark
+          make venv
       - name: Create Local Changes
         run: |
           set APP_ENV=production
