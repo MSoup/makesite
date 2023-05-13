@@ -1,6 +1,3 @@
 {
-    "base_path": "/makesite",
-    "subtitle": "ALT F4",
-    "author": "MSoup",
-    "site_url": "msoup.github.io"
+    "base_path": "/makesite"
 }

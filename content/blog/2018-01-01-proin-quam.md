@@ -1,6 +1,4 @@
 <!-- title: Proin Quam -->
-<!-- subtitle: Lorem Ipsum -->
-<!-- author: Dave -->
 
 ```py
 def function():
@@ -8,3 +6,8 @@ def function():
 ```
 
 Blog Template
+
+![alt text](/static/images/cat.jpeg)
+
+
+![Generate pls](/static/images/cat.jpeg)

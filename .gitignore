@@ -7,3 +7,5 @@ htmlcov
 .DS_Store
 venv
 backup
+backupvenv
+scratchpad.py

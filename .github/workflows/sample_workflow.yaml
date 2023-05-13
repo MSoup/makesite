@@ -20,6 +20,7 @@ jobs:
           pip install commonmark
       - name: Create Local Changes
         run: |
+          set APP_ENV=production
           make site
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

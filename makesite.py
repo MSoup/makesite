@@ -104,7 +104,27 @@ def read_content(filename):
                 raise ImportError("Error forced by test")
             import commonmark
 
+            # Manually append base_path to images
+            # Default parameters.
+            params = {
+                "base_path": "",
+            }
+
+            # If params.json exists, load it.
+            if os.path.isfile("params.json"):
+                params.update(json.loads(fread("params.json")))
+
+            # Replace /static/ with /base_path/ in all areas in production only
+            if os.environ.get("APP_ENV") == "production":
+                text = re.sub(r"/static/", params["base_path"], text)
+            # local env, remove /static/ and serve images from / locally
+            # note: use with http.serve for correct path
+            else:
+                text = re.sub(r"/static/", "/", text)
+
+            # Convert to HTML
             text = commonmark.commonmark(text)
+
         except ImportError as e:
             log("WARNING: Cannot render Markdown in {}: {}", filename, str(e))
 
@@ -174,8 +194,8 @@ def main():
 
     # Default parameters.
     params = {
-        "base_path": "/makesite",
-        "subtitle": "ALT F4",
+        "base_path": "",
+        "subtitle": "Lorem Ipsum",
         "author": "Admin",
         "site_url": "http://localhost:8000",
         "current_year": datetime.datetime.now().year,
