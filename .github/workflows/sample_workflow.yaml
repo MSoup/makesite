@@ -22,7 +22,7 @@ jobs:
           make venv
       - name: Create Local Changes
         run: |
-          echo "{\"base_path\": \"$BASE_PATH\"}" > params.json
+          mv params/params.json .
           make site
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
